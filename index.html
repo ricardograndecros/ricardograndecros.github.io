@@ -1,1 +1,47 @@
-Hello World
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="/scripts/index.js"></script>
+        <link rel="stylesheet" href="./styles/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="container-fluid p-5 bg-dark text-white text-center row">
+            <div id="banner-text-container" class="container col align-self-center">
+                <div class="banner-text"><h1 style="font-family: 'Press Start 2P', cursive;">Hello!</h1></div>
+                <div class="banner-text">
+                    <h3 style="font-family: 'Lato', sans-serif;">My name is</h3>
+                    <h3 style="font-family: 'Lato'; color: #f0ad4e; font-style: italic; font-weight: bold;">Ricardo Grande</h3>
+                </div>
+            </div>
+            <div id="portrait" class="col"><img src="images/portrait_bw.png" id="portrait-image" class="border border-white rounded-circle bg-warning" alt="Portrait"></div>
+        </div>
+        <div id="content" data-bs-spy="scroll" data-bs-target=".navbar">
+            <div id="nav-main" class="navbar navbar-expand-sm bg-dark navbar-dark text-center">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutme"><H5>About me</H5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cv"><H5>Curriculum Vitae</H5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects"><H5>Projects</H5></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     
+        
+    </body>
+</html>

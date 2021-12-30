@@ -1,0 +1,29 @@
+/* Adds padding to elements in main navigation bar*/
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-nav > li {
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+}
+
+#portrait {
+    display: flex;
+    justify-content: start;
+}
+#banner-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.banner-text {
+    width: 500px;
+    justify-self: end;
+}
