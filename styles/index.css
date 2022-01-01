@@ -67,6 +67,25 @@
     color: #2D3142;
 }
 
+/* Close button for email popover */
+.popover-title .close{
+    position: relative;
+    bottom: 3px;
+}
+
+/* Prevents bootstrap default blue color for <a> tags */
+#social-media-links a{
+    color: white;
+}
+ 
+#clipboardAlert1 {
+    justify-content: center;
+}
+#clipboardAlert2 {
+    position: absolute;
+    width: 300px;
+    margin-top: 10px;
+}
 
 @media only screen and (min-width: 850px){
     /* Fixes issue with responsive not justifying banner in center*/ 
@@ -113,4 +132,16 @@
         margin: 4px 4px 4px 4px;
     }
     
+}
+
+
+/* Icon styling */
+.fa-linkedin:hover {
+    color: #FFC107
+}
+.fa-envelope:hover {
+    color: #FFC107
+}
+.fa-github:hover {
+    color: #FFC107;
 }

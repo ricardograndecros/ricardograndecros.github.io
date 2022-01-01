@@ -2,7 +2,6 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -59,18 +58,31 @@
                             <h3 style="font-family: 'Press Start 2P', cursive;">Contact</h3>
                         </div>
                     </div>
-                    <div class="row justify-content-sm-center">
+                    <div class="row justify-content-sm-center" id="social-media-links">
                         <div class="col col-sm-2">
-                            <i class="fab fa-linkedin fa-2x"></i>
+                            <span class="material-icons-outlined">
+                                <a href="https://www.linkedin.com/in/ricardogrande" target="_blank">
+                                    <i class="fab fa-linkedin fa-2x"></i>
+                                </a>
+                            </span>
                         </div>
                         <div class="col col-sm-2">
-                            <i class="fas fa-envelope fa-2x"></i>
+                            <i class="fas fa-envelope fa-2x" data-toggle="popover" id="popover-email"></i>
                         </div>
                         <div class="col col-sm-2">
                             <span class="material-icons-outlined">
-                                <i class="fab fa-github fa-2x"></i>
+                                <a href="https://github.com/ricardograndecros" target="_blank">
+                                    <i class="fab fa-github fa-2x"></i>
+                                </a>
                             </span>
                         </div>
+                    </div>
+                    <div class ="row" style="display:none;" id="clipboardAlert1">
+                        <div class="alert alert-success alert-dismissable" id="clipboardAlert2">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            Email copied to clipboard!
+                        </div>
+                
                     </div>
                 </div>
             </div>
