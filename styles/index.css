@@ -1,7 +1,15 @@
+body {
+    max-width: 4000px;
+}
 /* Adds padding to elements in main navigation bar*/
 .row {
     margin-right: 0;
     margin-left: 0;
+}
+
+.banner-section {
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar-nav {
