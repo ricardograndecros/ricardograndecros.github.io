@@ -10,49 +10,82 @@
         <link rel="stylesheet" href="./styles/index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Press+Start+2P&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="#">
     </head>
     <body>
-        <div id="banner-container" class="container-fluid p-5 bg-dark text-white text-center row justify-content-center">
-            <div id="banner-text-container" class="container col align-self-center">
-                <div class="banner-text"><h1 style="font-family: 'Press Start 2P', cursive;">Hello!</h1></div>
-                <div class="banner-text">
-                    <h3 style="font-family: 'Lato', sans-serif;">My name is</h3>
-                    <h3 style="font-family: 'Lato'; color: #f0ad4e; font-style: italic; font-weight: bold;">Ricardo Grande</h3>
+        <section id="banner-section">
+            <div id="banner-container" class="container-fluid p-5 bg-dark text-white text-center row justify-content-center">
+                <div id="banner-text-container" class="container col align-self-center">
+                    <div class="banner-text"><h1 style="font-family: 'Press Start 2P', cursive;">Hello!</h1></div>
+                    <div class="banner-text">
+                        <h3 style="font-family: 'Lato', sans-serif;">My name is</h3>
+                        <h3 style="font-family: 'Lato'; color: #f0ad4e; font-style: italic; font-weight: bold;">Ricardo Grande</h3>
+                    </div>
+                </div>
+                <div id="portrait" class="col">
+                    <img src="images/portrait_bw.png" id="portrait-image" class="border border-white rounded-circle bg-warning" alt="Portrait">
+                </div>
+
+                <div id="nav-menu-container" data-bs-spy="scroll" data-bs-target=".navbar">
+                    <div id="nav-main" class="navbar navbar-expand-sm bg-dark navbar-dark text-center">
+                        <ul id="links-ul" class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <div class="button-menu" role="button">
+                                    <div class="circle"></div>
+                                    <a href="#aboutme">About me</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="button-menu" role="button">
+                                    <div class="circle"></div>
+                                    <a href="#cv">Curriculum Vitae</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="button-menu" role="button">
+                                    <div class="circle"></div>
+                                    <a href="#projects">Projects</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="container mt-lg-4">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-auto">
+                            <h3 style="font-family: 'Press Start 2P', cursive;">Contact</h3>
+                        </div>
+                    </div>
+                    <div class="row justify-content-sm-center">
+                        <div class="col col-sm-2">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </div>
+                        <div class="col col-sm-2">
+                            <i class="fas fa-envelope fa-2x"></i>
+                        </div>
+                        <div class="col col-sm-2">
+                            <span class="material-icons-outlined">
+                                <i class="fab fa-github fa-2x"></i>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="portrait" class="col">
-                <img src="images/portrait_bw.png" id="portrait-image" class="border border-white rounded-circle bg-warning" alt="Portrait">
-            </div>
-        </div>
-        <div id="content" data-bs-spy="scroll" data-bs-target=".navbar">
-            <div id="nav-main" class="navbar navbar-expand-sm bg-dark navbar-dark text-center">
-                <ul id="links-ul" class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <div class="button-menu" role="button">
-                            <div class="circle"></div>
-                            <a href="#aboutme">About me</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="button-menu" role="button">
-                            <div class="circle"></div>
-                            <a href="#cv">Curriculum Vitae</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="button-menu" role="button">
-                            <div class="circle"></div>
-                            <a href="#projects">Projects</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+           
+
+        </section>
+        <section id="about-me">
+            <h1>About me</h1>
+        </section>
+        <section id="cv">
+            <h1>Curriculum Vitae</h1>
+        </section>
+        <section id="projects">
+            <h1>Projects</h1>
+        </section>
      
         
     </body>
