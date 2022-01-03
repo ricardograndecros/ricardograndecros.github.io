@@ -190,7 +190,19 @@ input[type=checkbox][disabled] + .form-check-label{
     }
     
 }
+@media only screen and (max-width: 600px){
+    .badge {
+        display: none;
 
+    }
+    .accordion-body {
+        text-align: left;
+    }
+    #tecnatom-image-container{
+        display: flex;
+        justify-content: center;
+    }
+}
 
 /* Icon styling */
 .fa-linkedin:hover {
