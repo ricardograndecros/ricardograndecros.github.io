@@ -4,10 +4,10 @@ $(document).ready(function(){
     $('[data-toggle="popover"]').popover({
         placement : 'bottom',
         html : true,
-        title : 'Email address <a href="#" class="far fa-clipboard" data-toggle="tooltip" title="Click to copy email address"></a><a href="#" class="close" data-dismiss="alert">&times;</a>',
+        title : 'Email address <a href="#" class="far fa-clipboard" data-toggle="tooltip" title="Click to copy email address"></a><a href="#" class="btn btn-close" data-dismiss="alert" aria-hidden="true"></a></div>',
         content: 'ricardograndecros@gmail.com',
     });   
-    $(document).on("click", ".popover .close" , function(){
+    $(document).on("click", ".popover .btn-close" , function(){
         $(this).parents(".popover").popover('hide');
     });
     $(document).on("click", ".popover .fa-clipboard" , function(){
@@ -30,8 +30,26 @@ $(document).ready(function(){
         }, 2000);
 
     });
-    
+
+    /* Main menu clicks handlers */
+    $("aboutme-button").click(function(){
+        $('html,body').animate({
+            scrollTop: $("#about-me").offset().top},
+            'slow');
+    });
+    $("cv-button").click(function(){
+        $('html,body').animate({
+            scrollTop: $("#cv").offset().top},
+            'slow');
+    });
+    $("projects-button").click(function(){
+        $('html,body').animate({
+            scrollTop: $("#projects").offset().top},
+            'slow');
+    });
 });
+
+
 function selectElementText(el, win) {
     win = win || window;
     var doc = win.document, sel, range;
@@ -50,7 +68,8 @@ function selectElementText(el, win) {
 
 function showAlert(){
     if($("#clipboardAlert1").find("div#clipboardAlert2").length==0){
-      $("#clipboardAlert1").append("<div class='alert alert-success alert-dismissable' id='clipboardAlert2'> <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>Email copied to clipboard!</div>");
+        $('#clipboardAlert1').append("<div id='clipboardAlert2' class='alert alert-success alert-dismissible fade show' role='alert'>"+
+                                    "Email copied to clipboard! <div type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></div></div>");
     }
     $("#clipboardAlert1").css("display", "");
   }

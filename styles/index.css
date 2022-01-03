@@ -76,9 +76,12 @@ body {
 }
 
 /* Close button for email popover */
-.popover-title .close{
+.popover-header .btn-close{
     position: relative;
-    bottom: 3px;
+    margin-left: 50px;
+}
+.popover-header .fa-clipboard {
+    margin-left: 5px;
 }
 
 /* Prevents bootstrap default blue color for <a> tags */
@@ -94,6 +97,52 @@ body {
     width: 300px;
     margin-top: 10px;
 }
+
+
+/* Accordion */
+#accordionExperience {
+    width: 850px;
+    color: black;
+    text-align: justify;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #FFC107;
+    font-weight: bold;
+}
+
+.accordion-button:focus {
+    z-index: 3;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem #FFC107;
+}
+
+/* Disabled checkbox style */
+input[type=checkbox][disabled] {
+    opacity: 1;
+}
+input[type=checkbox][disabled] + .form-check-label{
+    opacity: 1;
+}
+
+/* Badges */
+.badge-container{
+    position: absolute;
+    right: 60px;
+}
+.badge {
+    font-size: .95em;
+}
+#android-badge{
+    background-color: #6db11f;
+}
+#database-badge{
+    background-color: #15AABF;
+}
+#graduation-badge {
+    background-color: #0981D1;
+}
+
 
 @media only screen and (min-width: 850px){
     /* Fixes issue with responsive not justifying banner in center*/ 
