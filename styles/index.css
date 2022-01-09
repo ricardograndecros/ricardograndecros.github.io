@@ -363,6 +363,9 @@ input[type=checkbox][disabled] + .form-check-label{
         display: none;
 
     }
+    #accordionExperience {
+        max-width: 410px;
+    }
     .accordion-body {
         text-align: left;
     }
@@ -387,6 +390,10 @@ input[type=checkbox][disabled] + .form-check-label{
 }
 
 @media only screen and (max-width: 400px){
+    #accordionExperience {
+        max-width: 360px;
+        padding-left: 2px;
+    }
     .timeline-element-right::before {
         display: none;
     }
