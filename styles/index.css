@@ -273,6 +273,7 @@ input[type=checkbox][disabled] + .form-check-label{
 .date-right {
     position: absolute;
     bottom: 0;
+    right: auto;
     left: 40px;
 }
 .timeline-element-text-container p {
@@ -289,6 +290,14 @@ input[type=checkbox][disabled] + .form-check-label{
     height: 100px;
 }
 #ai-fundamentals {
+    width: 100px;
+    height: 100px;
+}
+#cpe {
+    width: 100px;
+    height: 100px;
+}
+#bhs {
     width: 100px;
     height: 100px;
 }
@@ -311,6 +320,22 @@ input[type=checkbox][disabled] + .form-check-label{
     }
     .banner-text {
         justify-self: end;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    /* Timeline top margins */
+    #erasmus-unigraz {
+        margin-top: 20px;
+    }
+    #azure{
+        margin-top: 75px;
+    }
+    #senior-year {
+        margin-top: 60px;
+    }
+    #english-cpe {
+        margin-top: 170px;
     }
 }
 
@@ -420,12 +445,51 @@ input[type=checkbox][disabled] + .form-check-label{
         margin-left: 0;
     }
     .timeline-element-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-left: 8px;
         max-width: 370px;
     }
     .timeline-element-right {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
         margin-left: 8px;
         max-width: 370px;
+    }
+    .date-right {
+        position: absolute;
+        bottom: 0;
+        left: auto;
+        right: 40px;
+    }
+    .title-element-timeline a {
+        display: none;
+    }
+    #uc3m {
+        width: 250px;
+        height: 250px;
+    }
+    #unigraz {
+        width: 250px;
+        height: 250px;
+    }
+    #ai-fundamentals {
+        width: 250px;
+        height: 250px;
+    }
+    #cpe {
+        width: 250px;
+        height: 250px;
+    }
+    #fontenebro {
+        width: 100px;
+        height: 120px;
+    }
+    #bhs {
+        width: 250px;
+        height: 250px;
     }
 }
 
