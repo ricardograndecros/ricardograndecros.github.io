@@ -1,4 +1,3 @@
-const gtoken = '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';
 /* Initializes popovers */
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover({
