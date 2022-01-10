@@ -1,4 +1,4 @@
-
+const gtoken = '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';
 /* Initializes popovers */
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover({
@@ -28,7 +28,6 @@ $(document).ready(function(){
               }
               $("#clipboardAlert1").css('display', 'none');
         }, 2000);
-
     });
 
     /* Main menu clicks handlers */
@@ -47,9 +46,65 @@ $(document).ready(function(){
             scrollTop: $("#projects").offset().top},
             'slow');
     });
+
+    result = $.get('https://api.github.com/users/ricardograndecros/repos', function(response){
+        
+        var projects = document.getElementById('projects-cards-container');
+        response.forEach(repo => {
+            if(repo.name != 'ricardograndecros.github.io'){
+                let newCard = document.createElement('div');
+                newCard.className = 'card mb-3 bg-light text-dark';
+                newCard.style = "max-width: 540px;"
+                
+                let cardRow = document.createElement('div');
+                cardRow.className = 'row g-0';
+
+                let newCardCol1 = document.createElement('div');
+                newCardCol1.className = 'col-md-4'
+                let cardImage = document.createElement('img');
+                cardImage.src = "./images/bhs.jpeg";
+                cardImage.className = 'img-fluid rounded-start';
+                cardImage.alt = 'project image';
+                newCardCol1.appendChild(cardImage);
+
+                let newCardCol2 = document.createElement('div');
+                newCardCol2.className = 'col-md-8';
+
+                let cardBody = document.createElement('div');
+                cardBody.className = 'card-body';
+
+                let cardTitle = document.createElement('h5');
+                cardTitle.className = 'card-title';
+                cardTitle.innerText = repo.name;
+                cardBody.appendChild(cardTitle);
+
+                let cardDesc = document.createElement('p');
+                cardDesc.className = 'card-text';
+                cardDesc.innerText = repo.description;
+                cardBody.appendChild(cardDesc);
+
+                let cardDate = document.createElement('p');
+                cardDate.className = 'card-text';
+                let date = document.createElement('small');
+                date.className = 'text-muted';
+                date.innerText = repo.deployments_url.updated_at;
+                cardDate.appendChild(date);
+                cardBody.appendChild(cardDate);
+
+                newCardCol2.appendChild(cardBody);
+
+                cardRow.appendChild(newCardCol1);
+                cardRow.appendChild(newCardCol2);
+
+                newCard.appendChild(cardRow);
+
+                projects.appendChild(newCard);
+            }
+        });
+        
+    })
 });
-
-
+        
 function selectElementText(el, win) {
     win = win || window;
     var doc = win.document, sel, range;
