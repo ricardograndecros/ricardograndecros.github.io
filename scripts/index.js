@@ -86,7 +86,7 @@ $(document).ready(function(){
                 cardDate.className = 'card-text';
                 let date = document.createElement('small');
                 date.className = 'text-muted';
-                date.innerText = repo.deployments_url.updated_at;
+                date.innerText = new Date(repo.updated_at).toLocaleDateString();
                 cardDate.appendChild(date);
                 cardBody.appendChild(cardDate);
 
