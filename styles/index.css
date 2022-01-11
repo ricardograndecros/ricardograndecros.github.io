@@ -3,6 +3,7 @@ body {
 }
 #btn-back-to-top {
     position: fixed;
+    -webkit-transform: translateZ(0);
     bottom: 20px;
     right: 20px;
     width: 30px;
