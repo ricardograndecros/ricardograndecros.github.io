@@ -1,6 +1,24 @@
 body {
     max-width: 4000px;
 }
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: none;
+    border-radius: 50%;
+    z-index: 10000;
+    padding: 0;
+}
+#btn-back-to-top i {
+    margin-top: 4px;
+}
+#btn-back-to-top:hover {
+    opacity: 70%;
+}
+
 /* Adds padding to elements in main navigation bar*/
 .row {
     margin-right: 0;
@@ -98,6 +116,13 @@ body {
     margin-top: 10px;
 }
 
+
+/* About me */
+#aboutme-text {
+    margin-top: 20px;
+    text-align: justify;
+    max-width: 700px;
+}
 
 /* Accordion */
 #accordionExperience {
@@ -310,6 +335,37 @@ input[type=checkbox][disabled] + .form-check-label{
 } 
 .card {
     margin-top: 20px;
+}
+.card-image-col {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.date-updated-container {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+}
+.card-image {
+    display: block;
+    margin: 0 auto;
+}
+.text-muted .card-updated{
+    position: relative;
+}
+.card-text {
+    text-align: justify;
+}
+.card-button-container {
+    position: relative;
+    bottom: 0;
+    left: px;
+    width: 100px;
+}
+.card-button {
+    position: relative;
+    max-width: fit-content;
 }
 
 @media only screen and (min-width: 850px){

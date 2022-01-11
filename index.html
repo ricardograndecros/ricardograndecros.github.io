@@ -11,9 +11,6 @@
         <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script type="module">
-            import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
-        </script>
         <script src="/scripts/index.js"></script>
         <link rel="stylesheet" href="./styles/index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +20,9 @@
         <link rel="shortcut icon" href="#">
     </head>
     <body>
+        <div class="btn btn-warning" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </div>
         <section id="banner-section">
             <div id="banner-container" class="container-fluid p-5 bg-dark text-white text-center row justify-content-center">
                 <div id="banner-text-container" class="container col align-self-center">
@@ -98,7 +98,16 @@
 
         </section>
         <section id="about-me">
-            <h1>About me</h1>
+            <div id="about-me-container" class="container-fluid pt-5 pb-0 pl-0 pr-0 bg-dark text-white text-center row justify-content-center">
+                <h3 style="font-family: 'Press Start 2P', cursive;" class="row justify-content-center">About me</h3>
+                <div id="aboutme-text">
+                    <p><code>&lt;Hello World!&gt;</code> I'm Ricardo, welcome to my personal website!</p>
+                    <p>I'm a Computer Science and Business Administration student at Universidad Carlos III de Madrid. I like working on small personal projects for learning more! I have some international experience that 
+                    have taught me to adapt quickly to new environments.</p> 
+                    <p>I have previously worked with <code>&lt;Android&gt;</code> but now I am more interested
+                    into AI and Cloud. Currently I am seeking for an opportunity in either <code>&lt;Software Development&gt;</code> or <code>&lt;IT Consulting&gt;</code>.</p>
+                </div>
+            </div>
         </section>
         <section id="cv">
             <div id="working-experience" class="container-fluid p-5 bg-dark text-white text-center row justify-content-center">

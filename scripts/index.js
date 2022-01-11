@@ -46,6 +46,8 @@ $(document).ready(function(){
             'slow');
     });
 
+
+
     result = $.get('https://api.github.com/users/ricardograndecros/repos', function(response){
         
         var projects = document.getElementById('projects-cards-container');
@@ -59,10 +61,11 @@ $(document).ready(function(){
                 cardRow.className = 'row g-0';
 
                 let newCardCol1 = document.createElement('div');
-                newCardCol1.className = 'col-md-4'
+                newCardCol1.className = 'col-md-4 card-image-col'
                 let cardImage = document.createElement('img');
-                cardImage.src = "./images/bhs.jpeg";
-                cardImage.className = 'img-fluid rounded-start';
+                cardImage.className = 'resize-image'
+                cardImage.src = "./images/" + repo.name + ".png";
+                cardImage.className = 'img-fluid rounded-start border border-dark rounded card-image';
                 cardImage.alt = 'project image';
                 newCardCol1.appendChild(cardImage);
 
@@ -83,12 +86,23 @@ $(document).ready(function(){
                 cardBody.appendChild(cardDesc);
 
                 let cardDate = document.createElement('p');
-                cardDate.className = 'card-text';
+                cardDate.className = 'card-text date-updated-container';
                 let date = document.createElement('small');
-                date.className = 'text-muted';
+                date.className = 'text-muted card-updated';
                 date.innerText = new Date(repo.updated_at).toLocaleDateString();
                 cardDate.appendChild(date);
                 cardBody.appendChild(cardDate);
+
+
+                let cardButtonContainer = document.createElement('p');
+                cardButtonContainer.className = 'card-button-container';
+                let cardButton = document.createElement('a');
+                cardButton.className = 'btn btn-primary card-button'
+                cardButton.innerText = 'See more';
+                cardButton.href = repo.html_url;
+                cardButton.target = '_blank';
+                cardButtonContainer.appendChild(cardButton);
+                cardBody.appendChild(cardButtonContainer);
 
                 newCardCol2.appendChild(cardBody);
 
@@ -102,7 +116,35 @@ $(document).ready(function(){
         });
         
     })
+
+        //Get the button
+    let mybutton = document.getElementById("btn-back-to-top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+    scrollFunction();
+    };
+
+    function scrollFunction() {
+    if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+    ) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
 });
+
+
         
 function selectElementText(el, win) {
     win = win || window;
