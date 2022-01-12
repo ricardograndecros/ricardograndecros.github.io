@@ -561,8 +561,16 @@ input[type=checkbox][disabled] + .form-check-label{
 }
 
 @media only screen and (max-width: 400px){
+    #banner-container {
+        padding: 0;
+    }
     #portrait {
-        max-height: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    #portrait-image {
+        width: auto;
+        height: auto;
     }
     #btn-back-to-top {
         position: sticky;
