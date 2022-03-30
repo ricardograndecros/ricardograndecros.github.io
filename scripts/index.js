@@ -64,7 +64,19 @@ $(document).ready(function(){
                 newCardCol1.className = 'col-md-4 card-image-col'
                 let cardImage = document.createElement('img');
                 cardImage.className = 'resize-image'
-                cardImage.src = "./images/" + repo.name + ".png";
+
+                image_name = ''
+                var request = new XMLHttpRequest();
+                request.open("GET", "https://ricardograndecros.github.io/images/" + repo.name + ".png", true);
+                request.send()
+                request.onload = function(){
+                    if (request.status == 200){
+                        image_name = repo.name
+                    } else {
+                        image_name = "work-in-progress"
+                    }
+                }
+                cardImage.src = "./images/" + image_name + ".png";
                 cardImage.className = 'img-fluid rounded-start border border-dark rounded card-image';
                 cardImage.alt = 'project image';
                 newCardCol1.appendChild(cardImage);
