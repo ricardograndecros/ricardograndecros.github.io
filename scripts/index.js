@@ -71,12 +71,12 @@ $(document).ready(function(){
                 request.send()
                 request.onload = function(){
                     if (request.status == 200){
-                        image_name = repo.name
+                        cardImage.src = "./images/" + repo.name + ".png";
                     } else {
                         image_name = "work-in-progress"
+                        cardImage.src = "./images/" + image_name + ".png";
                     }
                 }
-                cardImage.src = "./images/" + image_name + ".png";
                 cardImage.className = 'img-fluid rounded-start border border-dark rounded card-image';
                 cardImage.alt = 'project image';
                 newCardCol1.appendChild(cardImage);
