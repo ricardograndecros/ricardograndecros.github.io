@@ -125,6 +125,21 @@ body {
     max-width: 700px;
 }
 
+.experience-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.experience-header a {
+    margin-left: 30px;
+    width: 120px;
+    height: fit-content;
+
+}
+#working-experience h4{
+    font-size: xx-large;
+}
 /* Accordion */
 #accordionExperience {
     width: 850px;
@@ -168,7 +183,6 @@ input[type=checkbox][disabled] + .form-check-label{
 #graduation-badge {
     background-color: #0981D1;
 }
-
 
 /* Timeline */
 .timeline-column {
@@ -487,6 +501,13 @@ input[type=checkbox][disabled] + .form-check-label{
     }
     .button-menu {
         margin: 4px 4px 4px 4px;
+    }
+    .experience-header {
+        flex-flow: column;
+        align-items: center;
+    }
+    .experience-header a {
+        margin: 10px 0px 20px 0px;
     }
     
 }
