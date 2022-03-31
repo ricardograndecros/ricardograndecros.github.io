@@ -569,7 +569,7 @@ input[type=checkbox][disabled] + .form-check-label{
         flex-direction: column;
     }
     #portrait-image {
-        width: auto;
+        width: 100%;
         height: auto;
     }
     #btn-back-to-top {
