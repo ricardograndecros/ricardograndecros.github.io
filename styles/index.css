@@ -581,7 +581,7 @@ input[type=checkbox][disabled] + .form-check-label{
     }
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 450px){
     #banner-container {
         padding: 0;
     }
