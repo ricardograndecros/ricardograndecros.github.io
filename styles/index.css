@@ -641,6 +641,35 @@ input[type=checkbox][disabled] + .form-check-label{
         margin-left: 4px;
         width: 300px;
     }
+    .edu-card-text {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .date-left {
+        width: 100%;
+        text-align: right;
+    }
+    .date-right{
+        width: 100%;
+        text-align: right;
+    }
+    #academic-experience-title{
+        text-align: center;
+    }
+    #education-title {
+        font-size: xx-large;
+        width: 100%;
+        text-align: center;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    #certifications-title{
+        font-size: xx-large;
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
 }
 
 /* Icon styling */
