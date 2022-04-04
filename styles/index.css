@@ -26,10 +26,10 @@ body {
     margin-left: 0;
 }
 
-.banner-section {
-    display: flex;
-    flex-direction: column;
+#banner-section { 
+    background-color: #212529;
 }
+
 
 .navbar-nav {
     display: flex;

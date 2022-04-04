@@ -31,19 +31,22 @@ $(document).ready(function(){
 
     /* Main menu clicks handlers */
     $("aboutme-button").click(function(){
-        $('html,body').animate({
-            scrollTop: $("#about-me").offset().top},
-            'slow');
+        $('body').animate({
+            scrollTop: $("#about-me-container").offset().top},
+            'swing',
+            function(){
+                console.log("clicked")
+            });
     });
     $("cv-button").click(function(){
-        $('html,body').animate({
-            scrollTop: $("#cv").offset().top},
-            'slow');
+        $('body').animate({
+            scrollTop: $("#working-experience").offset().top},
+            'swing');
     });
     $("projects-button").click(function(){
-        $('html,body').animate({
-            scrollTop: $("#projects").offset().top},
-            'slow');
+        $('body').animate({
+            scrollTop: $("#projects-cards-container").offset().top},
+            'swing');
     });
 
 
@@ -156,6 +159,15 @@ $(document).ready(function(){
     }
 });
 
+
+function scrollAboutMe(){
+    /* For some reason JQuery animate scroll does not detect the about me section,
+    as a quick fix I'm implementing it in a separate function. 
+    This is just a temporary workaround! */
+    $('body').animate({
+        scrollTop: $("#about-me-container").offset().top},
+        'swing');
+}
 
         
 function selectElementText(el, win) {
