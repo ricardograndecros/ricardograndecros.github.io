@@ -189,6 +189,12 @@ input[type=checkbox][disabled] + .form-check-label{
 #graduation-badge {
     background-color: #0981D1;
 }
+#cloud-badge {
+    background-color: orange;
+}
+#code-badge {
+    background-color: #7734eb;
+}
 
 /* Timeline */
 .timeline-column {
